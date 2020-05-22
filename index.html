@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/colors.css">
+    <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+</head>
+
+<body class="bg">
+    <header>
+        <nav class="bg">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"></a>
+                <span class="txt2 xl2"> &nbsp;&nbsp;&nbsp; Autolote </span><span class="txt2 xl2">Rogelio
+                    Salmeron</span>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="txt2" href="#Inicio">Inicio</a></li>
+                    <li><a class="txt2" href="#Vehiculos">Vehiculos</a></li>
+                    <li><a class="txt2" href="#Servicios">Nuestros Servicios</a></li>
+                    <li><a class="txt2" href="#Redes">Contactanos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav bg" id="mobile-demo">
+            <li><a class="txt2" href="#Inicio">Inicio</a></li>
+            <li><a class="txt2" href="#Vehiculos">Vehiculos</a></li>
+            <li><a class="txt2" href="#Servicios">Nuestros Servicios</a></li>
+            <li><a class="txt2" href="#Redes">Contactanos</a></li>
+        </ul>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.sidenav.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('.sidenav').sidenav();
+            });
+            //carrusel
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.carousel');
+                var instances = M.Carousel.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('.carousel.carousel-slider').carousel({ fullWidth: true });
+            });
+
+
+            var instance = M.Carousel.init({
+                fullWidth: true
+            });
+
+            // Or with jQuery
+
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true
+            });
+
+            //select
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('select').material_select();
+            });
+
+        </script>
+
+    </header>
+    <main >
+        <div>
+            <div id="Inicio">
+                <div class="carousel carousel-slider">
+                    <a class="carousel-item" href="#one!"><img src="img/img4.png"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/img1.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/img4.png"></a>
+                    <a class="carousel-item" href="#four!"><img src="img/img1.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div class="container bg2" >
+            <div class="section">
+                <div class="row">
+                    <div class="col m12 s12">
+                        <div class="section">
+                            <hr />
+                            <div class="center-align txtT">
+                                <h5>Nosotros</h5>
+                            </div>
+                            <hr/>
+                            <div id="About">
+                                <div class="col s12 m4">
+                                    <div class="card bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT">Vision</span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>I am a very simple card. I am good at containing small bits of
+                                                information.
+                                                I am convenient because I require little markup to use effectively.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT">Mision</span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>I am a very simple card. I am good at containing small bits of
+                                                information.
+                                                I am convenient because I require little markup to use effectively.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT">Historia</span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>I am a very simple card. I am good at containing small bits of
+                                                information.
+                                                I am convenient because I require little markup to use effectively.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="col s12 m12">
+                                    
+                                    <div id="Vehiculos"><hr/>
+                                        <div class="center-align txtT">
+                                            <h5 >Vehiculos</h5>
+                                        </div>
+                                        <hr/>
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="input-field">
+                                                <form action="">
+                                                    <select class="browser-default grey grey lighten-2">
+                                                        <option value="">Seleccione Opcion</option>
+                                                        <option value="1">Marca</option>
+                                                        <option value="2">Modelo</option>
+                                                        <option value="3">Año</option>
+                                                        <option value="4">Combustible</option>
+                                                    </select>
+                                                    <input type="text">
+                                                    <button class=" waves-effect waves-light btn bg txt2 "
+                                                        ><span class="">Buscar</span></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                                <img width="305" height="203" src="images/titulo.png"
+                                                    class="responsive-img wp-post-image"
+                                                    alt="Heritage Bicycles General Store"
+                                                    title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
+                                                    sizes="(max-width: 305px) 100vw, 305px"> </a>
+                                        </div>
+                                        <div class="card-content bbot">
+                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <hr />
+                                            <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
+                                                    class="activator brown-text text-darken-4 lg"><b>Año:</b> 2015
+                                                    <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
+                                                    <button class="btn waves-effect waves-light col s12 m12 bg txt2"
+                                                        ><span class="">Ver Mas</span></button>
+                                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                    class="responsive-img wp-post-image"
+                                                    alt="Heritage Bicycles General Store"
+                                                    title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
+                                                    sizes="(max-width: 305px) 100vw, 305px"> </a>
+                                        </div>
+                                        <div class="card-content bbot">
+                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <hr />
+                                            <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
+                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
+                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
+                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
+                                                    ><span class="">Ver Mas</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                    class="responsive-img wp-post-image"
+                                                    alt="Heritage Bicycles General Store"
+                                                    title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
+                                                    sizes="(max-width: 305px) 100vw, 305px"> </a>
+                                        </div>
+                                        <div class="card-content bbot">
+                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <hr />
+                                            <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
+                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
+                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel </span></a>
+                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
+                                                    ><span class="">Ver Mas</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                    class="responsive-img wp-post-image"
+                                                    alt="Heritage Bicycles General Store"
+                                                    title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
+                                                    sizes="(max-width: 305px) 100vw, 305px"> </a>
+                                        </div>
+                                        <div class="card-content bbot">
+                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <hr />
+                                            <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
+                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
+                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel </span></a>
+                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
+                                                    ><span class="">Ver Mas</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                    class="responsive-img wp-post-image"
+                                                    alt="Heritage Bicycles General Store"
+                                                    title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
+                                                    sizes="(max-width: 305px) 100vw, 305px"> </a>
+                                        </div>
+                                        <div class="card-content bbot ">
+                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <hr />
+                                            <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
+                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
+                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel </span></a>
+                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
+                                                    ><span class="">Ver Mas</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col s12 m12">
+                                <hr/>
+                                <div class="center-align  txtT" id="Servicios">
+                                    <h5>Nuestros Servicios</h5>
+                                </div>
+                                <hr />
+                                <div class=" col s12 m4">
+                                    <div class="card bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT"><b>Venta de Vehiculos</b></span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>Ofrecemos los mejores vehiculo a los mejores Precios, y en la mejor
+                                                calidad, contamos con las mejores marcas en vehiculos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT"><b>Renta de Vehiculos</b></span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>Contamos con las mejores marcas, y la mas excelente calidad en vehiculos
+                                                ofrecemos los mejores planes de renta.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT"><b>Compra de Vehiculos</b></span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>Vendes tu vehiculo, nosotros lo vendemos por ti, contamos con una
+                                                excelente ubicacion, tu vehiculo se vendera rapidamente.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card  bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT"><b>AutoServicio y CarWash</b></span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>Tenemos el mejor servicio de CarWash dejaremos tu
+                                                vehiculo reluciente. Contamos con los equipos mas
+                                                modernos y el personal capacitado, su vehiculo quedara
+                                                como nuevo en el menor tiempo posible.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card  bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT"><b>Taller de Enderezado y Pintura</b></span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>Nos preocupamos por su tiempo,
+                                                ofrecemos un excelente servicio de Pintura
+                                                contamos con los mejores equipos para un acabado
+                                                que dejara tu vehiculo como nuevo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card  bg3">
+                                        <div class="card-content bbot">
+                                            <span class="card-title txtT"><b>Taller Mecanico</b></span>
+                                        </div>
+                                        <div class="card-action txt">
+                                            <p>Contamos con personal capacitado, las mejores herramientas y equipos para
+                                                realizar las reparaciones en el menor tiempo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="Redes">
+        <footer class="page-footer bg txt">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Footer Content</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to
+                            organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
