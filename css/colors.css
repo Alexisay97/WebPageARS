@@ -1,0 +1,116 @@
+:root{
+    /*Colores 1*/
+
+    --main-bg-color-l:#7e0202;
+    --main-bg-color-lh:#970303;
+    --main-text-color-l:#424242;
+    --main-text2-color-l:white;
+    --main-title-color-l:#7e0202;
+    --main-bg2-color-l:#e0e0e0;
+    /*--main-bg2-color-lh:#d4d1d1;*/
+    --main-bg3-color-l:white;
+    --main-bg3-color-lh:#f1f1f1;
+
+    /*Colores 1*/
+    --main-bg-color-m:white;
+    --main-bg-color-mt:#424242;
+
+    /*Colores 1*/
+    --main-bg-color-w:black;
+
+    /*Colores 1*/
+    --main-bg-color-j:rgb(219, 219, 72);
+    --main-bg-color-jt:#424242;
+
+    /*Colores 1*/
+    --main-bg-color-v:#2196f3;
+
+    /*Colores 1*/
+    --main-bg-color-s:#ff6d00;
+
+    /*Colores 1*/
+    --main-bg-color-d:#1565c0; 
+}
+
+/*Color de fondo para el body, nav y botones*/
+
+.bg{
+    background-color: var(--main-bg-color-l);
+    
+}
+
+/*Al hacer hover sobre cualquiera de los anteriores*/
+
+.bg:hover{
+    background-color: var(--main-bg-color-lh);
+}
+
+/*Color de fondo del container*/
+
+.bg2{
+    background-color: var(--main-bg2-color-l);
+}
+
+/*Color de fondo de las tarjetas que contienen informacion*/
+.bg3{
+    background-color: var(--main-bg3-color-l);
+}
+/*Color al hacer hover sobre las tarjetas*/
+.bg3:hover{
+    background-color: var(--main-bg3-color-lh);
+}
+
+/*Color del texto */
+
+.txt{
+    color: var(--main-text-color-l);
+}
+
+/*Color del texto de los botones*/
+
+.txt2{
+    color: var(--main-text2-color-l);
+}
+
+/* Color de texto de los titulos */
+
+.txtT{
+    color: var(--main-title-color-l);
+}
+
+/*Color de la linea que se muestra en las tarjetas*/
+
+.bbot{
+    border-bottom:2px solid var(--main-bg-color-l);
+}
+
+/*Color de los hr */
+
+hr{
+    border:1px solid var(--main-bg-color-l);
+}
+
+/*ResaltadorB1 es para el titulo Autolote Rogelio Salmeron*/
+.resaltadorB1 {
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px
+}
+
+.resaltadorB {
+    color: #000000;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
