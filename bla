@@ -1,0 +1,82 @@
+
+<div class="section">
+    <div class="row">
+        <div class="col m12 s12">
+            <div class="section">
+                <div>
+                    <div class="">
+                        <div class="card bg3">
+                            <div class="card-content bbot">
+                                <span class="card-title txtT">TOYOTA HILUX 2015</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="">
+                                <div class="card">
+                                    <div id="slider" class="flexslider">
+                                        <ul class="slides">
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/titulo.jpg" />
+                                            </li>
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/pintura5.jpg" />
+                                            </li>
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/pintura6.jpg" />
+                                            </li>
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/pintura7.jpg" />
+                                            </li>
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/titulo.jpg" />
+                                            </li>
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/pintura5.jpg" />
+                                            </li>
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/pintura6.jpg" />
+                                            </li>
+                                            <li>
+                                                <img class="materialboxed" width="200px" src="images/pintura7.jpg" />
+                                            </li>
+                                            <!-- items mirrored twice, total of 12 -->
+                                        </ul>
+                                    </div>
+                                    <div id="carousel" class="flexslider">
+                                        <ul class="slides">
+                                            <li>
+                                                <img src="images/titulo.jpg" />
+                                            </li>
+                                            <li>
+                                                <img src="images/pintura5.jpg" />
+                                            </li>
+                                            <li>
+                                                <img src="images/pintura6.jpg" />
+                                            </li>
+                                            <li>
+                                                <img src="images/pintura7.jpg" />
+                                            </li>
+                                            <li>
+                                                <img src="images/titulo.jpg" />
+                                            </li>
+                                            <li>
+                                                <img src="images/pintura5.jpg" />
+                                            </li>
+                                            <li>
+                                                <img src="images/pintura6.jpg" />
+                                            </li>
+                                            <li>
+                                                <img src="images/pintura7.jpg" />
+                                            </li>
+                                            <!-- items mirrored twice, total of 12 -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>s

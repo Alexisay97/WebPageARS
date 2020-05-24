@@ -1,94 +1,196 @@
 :root{
-    /*Colores 1*/
+    /*Colores Tema 1 */
 
-    --main-bg-color-l:#7e0202;
-    --main-bg-color-lh:#970303;
-    --main-text-color-l:#424242;
-    --main-text2-color-l:white;
-    --main-title-color-l:#7e0202;
-    --main-bg2-color-l:#e0e0e0;
-    /*--main-bg2-color-lh:#d4d1d1;*/
-    --main-bg3-color-l:white;
-    --main-bg3-color-lh:#f1f1f1;
+    --main-bgnav-color-l:#7e0202;/* Color de fondo del menu */
+    --main-textnav-color-l:#ffffff;/* Color de texto del menu */
+    --main-item-color-1:#e74f4f;/*al hacer hover solo el elemento li*/
 
-    /*Colores 1*/
-    --main-bg-color-m:white;
-    --main-bg-color-mt:#424242;
+    --main-bg-color-l:#970303; /* Color de fondo primario */
 
-    /*Colores 1*/
-    --main-bg-color-w:black;
+    --main-text-color-l:#424242; /* Color de texto */
+    --main-text2-color-l:white; /* Color de texto menu y botones */
 
-    /*Colores 1*/
-    --main-bg-color-j:rgb(219, 219, 72);
-    --main-bg-color-jt:#424242;
+    --main-title-color-l:#7e0202; /* Color de texto titulos */
+    --main-bg2-color-l:#e0e0e0; /* Color de fondo container */
 
-    /*Colores 1*/
-    --main-bg-color-v:#2196f3;
+    --main-bg3-color-l:white; /* Color de fondo tarjetas */
+    --main-bg3-color-lh:#f1f1f1; /* Color de fondo tarjetas hover */
 
-    /*Colores 1*/
-    --main-bg-color-s:#ff6d00;
+    --main-bgbt-color-l:#7e0202; /* Color de fondo botones */
+    --main-bgbt-color-lh:#c20d0d; /* Color de fondo botones hover */
+    --main-textbt-color-l:#f1f1f1; /* Color de texto botones */
 
-    /*Colores 1*/
-    --main-bg-color-d:#1565c0; 
+    --main-txtTv-color-l:#7e0202; /* Color titulo tarjetas vehiculos */
+    --main-txtv-color-l:#424242; /* Color texto tarjetas vehiculos */
+    --main-bg4-color-l:white; /* Color de fondo tarjetas vehiculos */
+    --main-bg4-color-lh:#f1f1f1; /* Color de fondo tarjetas vehiculos hover */
+
+    /*Colores Tema 2 */
+
+    --main-bgnav-color-l:#333333;/* Color de fondo del menu */
+    --main-textnav-color-l:#ffffff;/* Color de texto del menu */
+    --main-item-color-1:#e74f4f;/*al hacer hover solo el elemento li*/
+
+    --main-bg-color-l:#222121; /* Color de fondo primario */
+
+    --main-text-color-l:#424242; /* Color de texto */
+    --main-text2-color-l:white; /* Color de texto menu y botones */
+
+    --main-title-color-l:#6D3622; /* Color de texto titulos */
+    --main-bg2-color-l:#241F19; /* Color de fondo container */
+
+    --main-bg3-color-l:#0C0B09; /* Color de fondo tarjetas */
+    --main-bg3-color-lh:#1B1813; /* Color de fondo tarjetas hover */
+
+    --main-bgbt-color-l:#7e0202; /* Color de fondo botones */
+    --main-bgbt-color-lh:#c20d0d; /* Color de fondo botones hover */
+    --main-textbt-color-l:#f1f1f1; /* Color de texto botones */
+
+    --main-txtTv-color-l:#6D3622; /* Color titulo tarjetas vehiculos */
+    --main-txtv-color-l:#424242; /* Color texto tarjetas vehiculos */
+    --main-bg4-color-l:#0C0B09; /* Color de fondo tarjetas vehiculos */
+    --main-bg4-color-lh:#1B1813; /* Color de fondo tarjetas vehiculos hover */
+
+    /*Colores Tema 3 */
+
+    --main-bgnav-color-l:#0a0a0a;/* Color de fondo del menu */
+    --main-textnav-color-l:#ffffff;/* Color de texto del menu */
+    --main-item-color-l:#9e9393a2;/*al hacer hover solo el elemento li*/
+
+    --main-bg-color-l:rgb(9, 139, 245); /* Color de fondo primario */
+
+    --main-text-color-l:#424242; /* Color de texto */
+    --main-text2-color-l:white; /* Color de texto menu y botones */
+
+    --main-title-color-l:rgb(20, 141, 240); /* Color de texto titulos */
+    --main-bg2-color-l:rgb(252, 252, 252); /* Color de fondo container */
+
+    --main-bg3-color-l:rgba(211, 218, 216, 0.63); /* Color de fondo tarjetas */
+    --main-bg3-color-lh:rgb(247, 246, 244); /* Color de fondo tarjetas hover */
+
+    --main-bgbt-color-l:rgb(9, 139, 245); /* Color de fondo botones */
+    --main-bgbt-color-lh:rgb(100, 183, 247);/* Color de fondo botones hover */
+    --main-textbt-color-l:#f1f1f1; /* Color de texto botones */
+
+    --main-txtTv-color-l:rgb(20, 141, 240); /* Color titulo tarjetas vehiculos */
+    --main-txtv-color-l:#424242; /* Color texto tarjetas vehiculos */
+    --main-bg4-color-l:rgba(211, 218, 216, 0.63); /* Color de fondo tarjetas vehiculos */
+    --main-bg4-color-lh:rgb(247, 246, 244); /* Color de fondo tarjetas vehiculos hover */
 }
 
-/*Color de fondo para el body, nav y botones*/
 
-.bg{
-    background-color: var(--main-bg-color-l);
-    
+/* Nav Bar */
+
+/*Color de fondo para navbar*/
+.bgnav{
+    background-color: var(--main-bgnav-color-l); /*tema 1*/ 
+    background-color: var(--main-bgnav-color-l); /*tema 1*/ 
+}
+/*Color del texto navbar */
+.txtnav{
+    color: var(--main-textnav-color-l);/*tema 1*/ 
+    color: var(--main-textnav-color-l);/*tema 1*/ 
 }
 
-/*Al hacer hover sobre cualquiera de los anteriores*/
+nav ul li:hover{
+    background-color: var(--main-item-color-l);/*tema 1*/ 
+}
+/* Botones */
 
-.bg:hover{
-    background-color: var(--main-bg-color-lh);
+/*Color de fondo botones */
+.bgbt{
+    background-color: var(--main-bgbt-color-l);/*tema 1*/
+    background-color: var(--main-bgbt-color-l); /*tema 1*/
 }
 
-/*Color de fondo del container*/
-
-.bg2{
-    background-color: var(--main-bg2-color-l);
-}
-
-/*Color de fondo de las tarjetas que contienen informacion*/
-.bg3{
-    background-color: var(--main-bg3-color-l);
-}
-/*Color al hacer hover sobre las tarjetas*/
-.bg3:hover{
-    background-color: var(--main-bg3-color-lh);
-}
-
-/*Color del texto */
-
-.txt{
-    color: var(--main-text-color-l);
+/* hover botones */
+.bgbt:hover{
+    background-color: var(--main-bgbt-color-lh);/*tema 1*/
+    background-color: var(--main-bgbt-color-lh); /*tema 1*/  
 }
 
 /*Color del texto de los botones*/
-
-.txt2{
-    color: var(--main-text2-color-l);
+.txtbt{
+    color: var(--main-textbt-color-l);/*tema 1*/ 
+    color: var(--main-textbt-color-l);/*tema 1*/ 
 }
 
-/* Color de texto de los titulos */
+/* Tarjetas vehiculos */
 
-.txtT{
-    color: var(--main-title-color-l);
+.bg4{
+    background-color: var(--main-bg4-color-l);/*tema 1*/
 }
 
+.bg4:hover{
+    background-color: var(--main-bg4-color-lh);/*tema 1*/
+}
+
+.txtTv{
+    color: var(--main-txtTv-color-l);/*tema 1*/ 
+}
+
+.txtv{
+    color: var(--main-txtv-color-l);/*tema 1*/ 
+}
+
+/* Tarjetas */
+
+/*Color de fondo de las tarjetas que contienen informacion*/
+.bg3{
+    background-color: var(--main-bg3-color-l);/*tema 1*/
+    background-color: var(--main-bg3-color-l); /*tema 1*/  
+}
+/*Color al hacer hover sobre las tarjetas*/
+.bg3:hover{
+    background-color: var(--main-bg3-color-lh);/*tema 1*/
+    background-color: var(--main-bg3-color-lh); /*tema 1*/  
+}
 /*Color de la linea que se muestra en las tarjetas*/
 
 .bbot{
-    border-bottom:2px solid var(--main-bg-color-l);
+    border-bottom:2px solid var(--main-bg-color-l);/*tema 1*/ 
+    border-bottom:2px solid var(--main-bg-color-l);/*tema 1*/ 
 }
 
 /*Color de los hr */
 
 hr{
-    border:1px solid var(--main-bg-color-l);
+    border:1px solid var(--main-bg-color-l);/*tema 1*/ 
+    border:1px solid var(--main-bg-color-l);/*tema 1*/ 
 }
+
+/*Color del texto */
+
+.txt{
+    color: var(--main-text-color-l);/*tema 1*/ 
+    color: var(--main-text-color-l);/*tema 1*/ 
+}
+
+/* Body */
+
+/*Color de fondo para el body*/
+
+.bg{
+    background-color: var(--main-bg-color-l); /*tema 1*/ 
+    background-color: var(--main-bg-color-l); /*tema 1*/ 
+}
+
+/* Container */
+
+/*Color de fondo del container*/
+
+.bg2{
+    background-color: var(--main-bg2-color-l);/*tema 1*/ 
+    background-color: var(--main-bg2-color-l); /*tema 1*/ 
+}
+
+/* Color de texto de los titulos */
+
+.txtT{
+   /* color: var(--main-title-color-l);/*tema 1*/ 
+    color: var(--main-title-color-l);/*tema 1*/ 
+}
+
 
 /*ResaltadorB1 es para el titulo Autolote Rogelio Salmeron*/
 .resaltadorB1 {
@@ -96,6 +198,10 @@ hr{
     font-weight: bold;
     font-family: sans-serif;
     font-size: 20px
+}
+
+.tauto{
+    height:auto;
 }
 
 .resaltadorB {
@@ -113,4 +219,9 @@ body {
 
 main {
     flex: 1 0 auto;
+}
+
+.carouselp{
+    width: 300px;
+    height: 300px;
 }

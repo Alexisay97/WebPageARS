@@ -7,32 +7,33 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/colors.css">
     <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+     <script type="text/javascript" src="js/funciones.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo</title>
 </head>
 
 <body class="bg">
     <header>
-        <nav class="bg">
+        <nav class="bgnav">
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo"></a>
-                <span class="txt2 xl2"> &nbsp;&nbsp;&nbsp; Autolote </span><span class="txt2 xl2">Rogelio
+                <span class="txtnav xl2"> &nbsp;&nbsp;&nbsp; Autolote </span><span class="txt2 xl2">Rogelio
                     Salmeron</span>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="txt2" href="#Inicio">Inicio</a></li>
-                    <li><a class="txt2" href="#Vehiculos">Vehiculos</a></li>
-                    <li><a class="txt2" href="#Servicios">Nuestros Servicios</a></li>
-                    <li><a class="txt2" href="#Redes">Contactanos</a></li>
+                    <li><a class="txtnav" href="#Inicio">Inicio</a></li>
+                    <li><a class="txtnav" href="#Vehiculos">Vehiculos</a></li>
+                    <li><a class="txtnav" href="#Servicios">Nuestros Servicios</a></li>
+                    <li><a class="txtnav" href="#Redes">Contactanos</a></li>
                 </ul>
             </div>
         </nav>
 
-        <ul class="sidenav bg" id="mobile-demo">
-            <li><a class="txt2" href="#Inicio">Inicio</a></li>
-            <li><a class="txt2" href="#Vehiculos">Vehiculos</a></li>
-            <li><a class="txt2" href="#Servicios">Nuestros Servicios</a></li>
-            <li><a class="txt2" href="#Redes">Contactanos</a></li>
+        <ul class="sidenav txtnav bgnav" id="mobile-demo">
+            <li class="txtnav"><a  href="#Inicio">Inicio</a></li>
+            <li><a class="txtnav" href="#Vehiculos">Vehiculos</a></li>
+            <li><a class="txtnav" href="#Servicios">Nuestros Servicios</a></li>
+            <li><a class="txtnav" href="#Redes">Contactanos</a></li>
         </ul>
 
         <script type="text/javascript">
@@ -46,7 +47,28 @@
             $(document).ready(function () {
                 $('.sidenav').sidenav();
             });
-            //carrusel
+
+            //carrusel diseño 1
+
+           /* document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init({indicators: true});
+            }); no funfulla el cod js*/
+
+            // Or with jQuery
+
+            $(document).ready(function(){
+            $('.carousel').carousel({fullWidth: true,indicators: true,duration:500},setTimeout(autoplay,60000));
+
+            });
+
+            function autoplay() {
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 60000);
+            }
+      
+
+            /*carrusel diseño2 *
 
             document.addEventListener('DOMContentLoaded', function () {
                 var elems = document.querySelectorAll('.carousel');
@@ -56,21 +78,36 @@
             // Or with jQuery
 
             $(document).ready(function () {
-                $('.carousel.carousel-slider').carousel({ fullWidth: true });
+                $('.carousel.carousel-slider').carousel({ fullWidth: false });
             });
 
 
             var instance = M.Carousel.init({
-                fullWidth: true
+                fullWidth: false
             });
 
             // Or with jQuery
 
             $('.carousel.carousel-slider').carousel({
-                fullWidth: true
+                fullWidth: false
             });
 
-            //select
+
+            /*Carousel diseño 3*
+
+            var instance = M.Carousel.init({
+                fullWidth: true,
+                indicators: true
+            });
+
+            // Or with jQuery
+
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                indicators: true
+            });*/
+
+            /*select*/
 
             document.addEventListener('DOMContentLoaded', function () {
                 var elems = document.querySelectorAll('select');
@@ -83,18 +120,129 @@
                 $('select').material_select();
             });
 
+            /* Modal */
+            $(document).ready(function(){
+                $('.modal').modal();
+            });
         </script>
 
     </header>
     <main >
         <div>
-            <div id="Inicio">
-                <div class="carousel carousel-slider">
+            <div id="Inicio" class="container">
+                <!-- Carouser diseño 1 ->
+                 <div class="carousel carousel-slider ">
+                    
+                    <a class="carousel-item" href="#one!"><img src="images/logo1.jpeg"></a>
+                    <a class="carousel-item" href="#two!"><img src="images/img1.jpeg"></a>  
+                    <a class="carousel-item" href="#three!"><img src="images/img2.jpeg"></a>
+                    <a class="carousel-item" href="#four!"><img src="images/img3.jpeg"></a>
+                    <a class="carousel-item" href="#five!"><img src="images/logo2.jpeg"></a>
+                 </div>
+      
+                <!-- Carouser diseño 2 -->
+
+                <!--div class="carousel carousel-slider">
+                    <a class="carousel-item " href="#one!"><img src="images/logo1.jpeg"></a>
+                    <a class="carousel-item" href="#two!"><img src="images/img1.jpeg"></a>
+                    <a class="carousel-item" href="#three!"><img src="images/img2.jpeg"></a>
+                    <a class="carousel-item" href="#four!"><img src="images/img3.jpeg"></a>
+                    <a class="carousel-item" href="#five!"><img src="images/logo2.jpeg"></a>
+                    
+                 </div-->
+                
+                 <!-- Carouser diseño 3 -->
+
+                 <div class="card">
+                    <div class="carousel carousel-slider " >
+                        <div class="carousel-item red" href="#one!">
+                            <div class="row">
+                                <div class="card bg2 col s12 m12">
+                                   <div class="card-image col s12 m6">
+                                       <a href="#one!"><img src="images/logo1.jpeg" width="300px" height="300px"></a>
+                                   </div>
+                                   <div class="card-content center  txt">
+                                       <h2 class="txtT">Autolote Rogelio Salmeron</h2>
+                                   <p class="txt">Ofeciendo vehiculos de Calidad. <br> Compra, Venta y Renta de Vehiculos <br> "Su Vehiculo Garantizado" <br> Visitanos: Entrada Colonia Ventura Perla, Santa Rosa de Lima, La Union o Cont&aacute;ctenos: +503 6200 5921, 6200 5917. </p>
+                                   </div>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item amber" href="#two!">
+                            <div class="row">
+                                 <div class="card col s12 m12 bg2">
+                                    <div class="card-image col s12 m6">
+                                        <a href="#one!"><img src="images/pintura1.jpg" width="300px" height="300px"></a>
+                                    </div>
+                                    <div class="card-content col s12 m6">
+                                        <h2 class="txtT">Autolote Rogelio Salmeron</h2>
+                                    <p class="txt">Nos preocupamos por su tiempo,
+                                                    ofrecemos un excelente servicio de Pintura
+                                                    contamos con los mejores equipos para un acabado
+                                                    que dejara tu vehiculo como nuevo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item green " href="#three!">
+                            <div class="row">
+                                <div class="card col s12 m12 bg2">
+                                    <div class="card col s12 m6">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                            <img width="300px" height="310px" src="images/taller4.jpg"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content s12 m6 txt">
+                                        <h2 class="txtT">Autolote Rogelio Salmeron</h2>
+                                        <p class="txt">Contamos con personal capacitado, las mejores herramientas y equipos para realizar las reparaciones en el menor tiempo. Contamos con escanner computarizado, y distribuidores de repuestos de confianza. Solo la mejores marcas para tu vehiculo.</p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>    
+                        <div class="carousel-item blue" href="#four!">
+                            <div class="row">
+                                <div class="card col s12 m12 bg2">
+                                    <div class="card col s12 m6">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                            <img width="300px" height="330px" src="images/serviciosCarwash.jpg"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-content s12 m6 txt">
+                                    <h2 class="txtT">Autolote Rogelio Salmeron</h2>
+                                    <p class="txt">Tenemos el mejor servicio de CarWash, dejaremos tu
+                                                    vehiculo reluciente. Contamos con los equipos mas
+                                                    modernos y el personal capacitado, su vehiculo quedara
+                                                    como nuevo en el menor tiempo posible.</p>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="carousel-item black" href="#five!">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <a href=""><img src="img/img4.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+      
+                <!--div class="carousel carousel-slider">
                     <a class="carousel-item" href="#one!"><img src="img/img4.png"></a>
                     <a class="carousel-item" href="#two!"><img src="img/img1.jpg"></a>
                     <a class="carousel-item" href="#three!"><img src="img/img4.png"></a>
                     <a class="carousel-item" href="#four!"><img src="img/img1.jpg"></a>
-                </div>
+                </div-->
+            </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
             </div>
         </div>
         <div class="container bg2" >
@@ -145,15 +293,13 @@
                                     </div>
                                 </div>
                             </div>
-
                                 <div class="col s12 m12">
-                                    
                                     <div id="Vehiculos"><hr/>
                                         <div class="center-align txtT">
                                             <h5 >Vehiculos</h5>
                                         </div>
                                         <hr/>
-                                    <div class="card">
+                                    <div class="card bg3">
                                         <div class="card-content">
                                             <div class="input-field">
                                                 <form action="">
@@ -165,7 +311,7 @@
                                                         <option value="4">Combustible</option>
                                                     </select>
                                                     <input type="text">
-                                                    <button class=" waves-effect waves-light btn bg txt2 "
+                                                    <button class=" waves-effect waves-light btn bgbt txtbt "
                                                         ><span class="">Buscar</span></button>
                                                 </form>
                                             </div>
@@ -173,7 +319,7 @@
                                     </div>
                                 </div>
                                 <div class="col s12 m4">
-                                    <div class="card">
+                                    <div class="card bg4">
                                         <div class="card-image waves-effect waves-block waves-light">
                                             <a href="">
                                                 <img width="305" height="203" src="images/titulo.png"
@@ -183,98 +329,130 @@
                                                     sizes="(max-width: 305px) 100vw, 305px"> </a>
                                         </div>
                                         <div class="card-content bbot">
-                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <p class="area"><a class="txtTv" href="">TOYOTA HILUX</a></p>
                                             <hr />
                                             <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
-                                                    class="activator brown-text text-darken-4 lg"><b>Año:</b> 2015
+                                                    class="activator txtv lg"><b>Año:</b> 2015
                                                     <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
-                                                    <button class="btn waves-effect waves-light col s12 m12 bg txt2"
-                                                        ><span class="">Ver Mas</span></button>
+                                                    <a class="waves-effect waves-light btn modal-trigger col s12 m12 bgbt txtbt" href="#modal1">Ver Mas</a>
+                                                    <!--button class="btn waves-effect waves-light col s12 m12 bg txt2"
+                                                        ><span class="">Ver Mas</span></button-->
                                                     
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col s12 m4">
-                                    <div class="card">
+                                    <div class="card bg4">
                                         <div class="card-image waves-effect waves-block waves-light">
                                             <a href="">
-                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                <img width="305" height="203" src="images/titulo.png"
                                                     class="responsive-img wp-post-image"
                                                     alt="Heritage Bicycles General Store"
                                                     title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
                                                     sizes="(max-width: 305px) 100vw, 305px"> </a>
                                         </div>
                                         <div class="card-content bbot">
-                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <p class="area"><a class="txtTv" href="">TOYOTA HILUX</a></p>
                                             <hr />
                                             <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
-                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
-                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
-                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
-                                                    ><span class="">Ver Mas</span></button>
+                                                    class="activator txtv lg"><b>Año:</b> 2015
+                                                    <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
+                                                    <a class="waves-effect waves-light btn modal-trigger col s12 m12 bgbt txtbt" href="#modal1">Ver Mas</a>
+                                                    <!--button class="btn waves-effect waves-light col s12 m12 bg txt2"
+                                                        ><span class="">Ver Mas</span></button-->
+                                                    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col s12 m4">
-                                    <div class="card">
+                                    <div class="card bg4">
                                         <div class="card-image waves-effect waves-block waves-light">
                                             <a href="">
-                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                <img width="305" height="203" src="images/titulo.png"
                                                     class="responsive-img wp-post-image"
                                                     alt="Heritage Bicycles General Store"
                                                     title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
                                                     sizes="(max-width: 305px) 100vw, 305px"> </a>
                                         </div>
                                         <div class="card-content bbot">
-                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <p class="area"><a class="txtTv" href="">TOYOTA HILUX</a></p>
                                             <hr />
                                             <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
-                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
-                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel </span></a>
-                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
-                                                    ><span class="">Ver Mas</span></button>
+                                                    class="activator txtv lg"><b>Año:</b> 2015
+                                                    <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
+                                                    <a class="waves-effect waves-light btn modal-trigger col s12 m12 bgbt txtbt" href="#modal1">Ver Mas</a>
+                                                    <!--button class="btn waves-effect waves-light col s12 m12 bg txt2"
+                                                        ><span class="">Ver Mas</span></button-->
+                                                    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col s12 m4">
-                                    <div class="card">
+                                    <div class="card bg4">
                                         <div class="card-image waves-effect waves-block waves-light">
                                             <a href="">
-                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                <img width="305" height="203" src="images/titulo.png"
                                                     class="responsive-img wp-post-image"
                                                     alt="Heritage Bicycles General Store"
                                                     title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
                                                     sizes="(max-width: 305px) 100vw, 305px"> </a>
                                         </div>
                                         <div class="card-content bbot">
-                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                            <p class="area"><a class="txtTv" href="">TOYOTA HILUX</a></p>
                                             <hr />
                                             <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
-                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
-                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel </span></a>
-                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
-                                                    ><span class="">Ver Mas</span></button>
+                                                    class="activator txtv lg"><b>Año:</b> 2015
+                                                    <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
+                                                    <a class="waves-effect waves-light btn modal-trigger col s12 m12 bgbt txtbt" href="#modal1">Ver Mas</a>
+                                                    <!--button class="btn waves-effect waves-light col s12 m12 bg txt2"
+                                                        ><span class="">Ver Mas</span></button-->
+                                                    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col s12 m4">
-                                    <div class="card">
+                                    <div class="card bg4">
                                         <div class="card-image waves-effect waves-block waves-light">
                                             <a href="">
-                                                <img width="305" height="203" src="images/titulo.jpg"
+                                                <img width="305" height="203" src="images/titulo.png"
                                                     class="responsive-img wp-post-image"
                                                     alt="Heritage Bicycles General Store"
                                                     title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
                                                     sizes="(max-width: 305px) 100vw, 305px"> </a>
                                         </div>
-                                        <div class="card-content bbot ">
-                                            <p class="area"><a class="txtT" href="">TOYOTA HILUX</a></p>
+                                        <div class="card-content bbot">
+                                            <p class="area"><a class="txtTv" href="">TOYOTA HILUX</a></p>
                                             <hr />
                                             <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
-                                                class="activator brown-text text-darken-4 lg"> <b>Año:</b> 2015
-                                                <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel </span></a>
-                                                <button class="btn waves-effect waves-light bg txt2 col s12 m12"
-                                                    ><span class="">Ver Mas</span></button>
+                                                    class="activator txtv lg"><b>Año:</b> 2015
+                                                    <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
+                                                    <a class="waves-effect waves-light btn modal-trigger col s12 m12 bgbt txtbt" href="#modal1">Ver Mas</a>
+                                                    <!--button class="btn waves-effect waves-light col s12 m12 bg txt2"
+                                                        ><span class="">Ver Mas</span></button-->
+                                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m4">
+                                    <div class="card bg4">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <a href="">
+                                                <img width="305" height="203" src="images/titulo.png"
+                                                    class="responsive-img wp-post-image"
+                                                    alt="Heritage Bicycles General Store"
+                                                    title="Heritage Bicycles General Store" srcset="images/titulo.jpg"
+                                                    sizes="(max-width: 305px) 100vw, 305px"> </a>
+                                        </div>
+                                        <div class="card-content bbot">
+                                            <p class="area"><a class="txtTv" href="">TOYOTA HILUX</a></p>
+                                            <hr />
+                                            <a href="" data-deeplink="adbeus://heritage-bicycles-general-store"><span
+                                                    class="activator txtv lg"><b>Año:</b> 2015
+                                                    <br> <b>Trasmision:</b> Estandar <br> <b>Combustible:</b> Diesel</span></a>
+                                                    <a class="waves-effect waves-light btn modal-trigger col s12 m12 bgbt txtbt" href="#modal1">Ver Mas</a>
+                                                    <!--button class="btn waves-effect waves-light col s12 m12 bg txt2"
+                                                        ><span class="">Ver Mas</span></button-->
+                                                    
                                         </div>
                                     </div>
                                 </div>
@@ -346,7 +524,7 @@
                                     </div>
                                 </div>
                                 <div class="col s12 m4">
-                                    <div class="card  bg3">
+                                    <div class="card bg3">
                                         <div class="card-content bbot">
                                             <span class="card-title txtT"><b>Taller Mecanico</b></span>
                                         </div>
@@ -364,7 +542,7 @@
         </div>
     </main>
     <div id="Redes">
-        <footer class="page-footer bg txt">
+        <footer class="page-footer bgnav txtnav">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -395,3 +573,4 @@
 </body>
 
 </html>
+
