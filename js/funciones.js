@@ -1,6 +1,6 @@
-window.onload = iniciar() {
+window.onload = iniciar(); //{
 			//alert('OK');
-		}
+		//}
 
 function iniciar(){
 
