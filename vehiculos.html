@@ -25,6 +25,77 @@
 </head>
 
 <body class="bg">
+    <script>
+cadVariables = location.search.substring(1,location.search.length);
+arrVariables = cadVariables.split("&");
+for (i=0; i<arrVariables.length; i++) {
+  arrVariableActual = arrVariables[i].split("=");
+  if (isNaN(parseFloat(arrVariableActual[1])))
+    eval(arrVariableActual[0]+"='"+unescape(arrVariableActual[1])+"';");
+  else
+    eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
+}
+if(TEMASEL==2){
+    tema2();
+}else{
+    tema1();
+}
+
+function pasarVariables(pagina, nombres) {
+  pagina +="?";
+  nomVec = nombres.split(",");
+  for (i=0; i<nomVec.length; i++)
+    pagina += nomVec[i] + "=" + escape(eval(nomVec[i]))+"&";
+  pagina = pagina.substring(0,pagina.length-1);
+  location.href=pagina;
+}
+
+function tema2(){
+   var S=document.createElement('style');S.type = 'text/css';
+    S.appendChild(document.createTextNode(":root{    --main-bgnav-color-l:#7e0202;/* Color de fondo del menu */"+
+    "    --main-textnav-color-l:#ffffff;/* Color de texto del menu */"
+    +"    --main-item-color-1:#e74f4f;/*al hacer hover solo el elemento li*/"
+    +"--main-bg-color-l:#970303; /* Color de fondo primario */"
+    +"--main-text-color-l:#424242; /* Color de texto */"
+    +"--main-text2-color-l:white; /* Color de texto menu y botones */"
+    +"--main-title-color-l:#7e0202; /* Color de texto titulos */"
+    +"--main-bg2-color-l:#e0e0e0; /* Color de fondo container */"
+    +"--main-bg3-color-l:white; /* Color de fondo tarjetas */"
+    +"--main-bg3-color-lh:#f1f1f1; /* Color de fondo tarjetas hover */"
+    +"--main-bgbt-color-l:#7e0202; /* Color de fondo botones */"
+    +"--main-bgbt-color-lh:#c20d0d; /* Color de fondo botones hover */"
+    +"--main-textbt-color-l:#f1f1f1; /* Color de texto botones */"
+    +"--main-txtTv-color-l:#7e0202; /* Color titulo tarjetas vehiculos */"
+    +"--main-txtv-color-l:#424242; /* Color texto tarjetas vehiculos */"
+    +"--main-bg4-color-l:white; /* Color de fondo tarjetas vehiculos */"
+    +"--main-bg4-color-lh:#f1f1f1; /* Color de fondo tarjetas vehiculos hover */    } "));
+    document.body.appendChild(S);
+    TEMASEL=2;
+}
+function tema1(){
+   var S=document.createElement('style');S.type = 'text/css';
+    S.appendChild(document.createTextNode(":root{    --main-bgnav-color-l:#7e0202;/* Color de fondo del menu */"+
+    "    --main-bgnav-color-l:#0a0a0a;/* Color de texto del menu */"
+    +"    --main-item-color-1:#ffffff;/*al hacer hover solo el elemento li*/"
+    +"--main-bg-color-l:rgb(9, 139, 245);; /* Color de fondo primario */"
+    +"--main-text-color-l:#424242; /* Color de texto */"
+    +"--main-text2-color-l:white; /* Color de texto menu y botones */"
+    +"--main-title-color-l:rgb(20, 141, 240); /* Color de texto titulos */"
+    +"--main-bg2-color-l:rgb(252, 252, 252); /* Color de fondo container */"
+    +"--main-bg3-color-l:rgba(211, 218, 216, 0.63); /* Color de fondo tarjetas */"
+    +"--main-bg3-color-lh:rgb(247, 246, 244); /* Color de fondo tarjetas hover */"
+    +"--main-bgbt-color-l:rgb(9, 139, 245); /* Color de fondo botones */"
+    +"--main-bgbt-color-lh:rgb(100, 183, 247); /* Color de fondo botones hover */"
+    +"--main-textbt-color-l:#f1f1f1; /* Color de texto botones */"
+    +"--main-txtTv-color-l:rgb(20, 141, 240); /* Color titulo tarjetas vehiculos */"
+    +"--main-txtv-color-l:#424242; /* Color texto tarjetas vehiculos */"
+    +"--main-bg4-color-l:rgba(211, 218, 216, 0.63); /* Color de fondo tarjetas vehiculos */"
+    +"--main-bg4-color-lh:rgb(247, 246, 244); /* Color de fondo tarjetas vehiculos hover */    } "));
+    document.body.appendChild(S);
+    TEMASEL=1;
+}
+
+</script>
     <div>
         <header>
             <div class="navbar-fixed">
@@ -35,20 +106,18 @@
                         Salmeron</span>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a class="txtnav" href="#Inicio">Inicio</a></li>
-                        <li><a class="txtnav" href="#Vehiculos">Vehiculos</a></li>
-                        <li><a class="txtnav" href="#Servicios">Nuestros Servicios</a></li>
-                        <li><a class="txtnav" href="#Redes">Contactanos</a></li>
+                        <li><a class="txtnav" href="javascript:pasarVariables('index.html', 'TEMASEL')">Volver al Catalogo</a></li>
+                        <li><a class="txtnav" href="javascript:{tema1();};">Tema1</a></li>
+                        <li><a class="txtnav" href="javascript:{tema2();};">Tema2</a></li>
                     </ul>
                 </div>
             </nav>
             </div>    
 
            <ul class="sidenav bgnav" id="mobile-demo">
-                <li><a  href="#Inicio"><span class="txtnav">Inicio</span></a></li>
-                <li><a  href="#Vehiculos"><span class="txtnav">Vehiculos</span></a></li>
-                <li><a  href="#Servicios"><span class="txtnav">Nuestros Servicios</span></a></li>
-                <li><a  href="#Redes"><span class="txtnav">Contactanos</span></a></li>
+                <li><a  href="javascript:pasarVariables('index.html', 'TEMASEL')"><span class="txtnav">volver al Catalogo</span></a></li>
+                <li><a  href="javascript:{tema1();};"><span class="txtnav">tema1</span></a></li>
+                <li><a  href="javascript:{tema2();};"><span class="txtnav">tema2</span></a></li>
             </ul>
 
             <script type="text/javascript">
@@ -175,7 +244,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section">
+                    <!--div class="section">
                         <div class="row">
                             <div class="card-content">
                                 <div class="card col s12 m12">
@@ -208,7 +277,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
                 </div>
             </div>
         </main>
@@ -216,7 +285,7 @@
             <footer class="page-footer bgnav txtnav">
                 <div class="container">
                     <div class="row">
-                        <div class="col l6 s12">
+                        <!--div class="col l6 s12">
                             <h5 class="white-text">Footer Content
                             </h5>
                             <p class="grey-text text-lighten-4">You
@@ -231,13 +300,28 @@
                                 <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
                                 <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
                             </ul>
-                        </div>
+                        </div-->
+                        <span>
+                                Visita nuestras oficinas: <br>
+                                Oficina Central <br>
+                                Carretera Ruta Militar,salida a San Miguel, entrada principal de colonia Ventura
+                                Perla. Santa Rosa de Lima.<br>
+                                Sucursal <br>
+                                Carretera Ruta Militar salida a la Unión, colonia Fuentes,Santa Rosa de Lima. <br>
+                                Llámanos o escríbenos al:📲 6200-5918 <br>
+                                Escríbenos al correo:
+                                <a href="mailto:autoloterogeliosalmeron.pintasal@gmail.com">autoloterogeliosalmeron.pintasal@gmail.com
+                                </a>
+                                <br>
+                                O envíanos un Inbox y te brindaremos toda la información
+                                
+                                ¡Será un gusto atenderte! </span>
                     </div>
                 </div>
                 <div class="footer-copyright">
                     <div class="container">
-                        © 2014 Copyright Text
-                        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                        © 2020 Autolote Rogelio Salmeron
+                        <a class="grey-text text-lighten-4 right" href="#!">Algun Extra</a>
                     </div>
                 </div>
             </footer>

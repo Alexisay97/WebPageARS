@@ -25,32 +25,6 @@
     --main-bg4-color-l:white; /* Color de fondo tarjetas vehiculos */
     --main-bg4-color-lh:#f1f1f1; /* Color de fondo tarjetas vehiculos hover */
 
-    /*Colores Tema 2 */
-
-    --main-bgnav-color-l:#333333;/* Color de fondo del menu */
-    --main-textnav-color-l:#ffffff;/* Color de texto del menu */
-    --main-item-color-1:#e74f4f;/*al hacer hover solo el elemento li*/
-
-    --main-bg-color-l:#222121; /* Color de fondo primario */
-
-    --main-text-color-l:#424242; /* Color de texto */
-    --main-text2-color-l:white; /* Color de texto menu y botones */
-
-    --main-title-color-l:#6D3622; /* Color de texto titulos */
-    --main-bg2-color-l:#241F19; /* Color de fondo container */
-
-    --main-bg3-color-l:#0C0B09; /* Color de fondo tarjetas */
-    --main-bg3-color-lh:#1B1813; /* Color de fondo tarjetas hover */
-
-    --main-bgbt-color-l:#7e0202; /* Color de fondo botones */
-    --main-bgbt-color-lh:#c20d0d; /* Color de fondo botones hover */
-    --main-textbt-color-l:#f1f1f1; /* Color de texto botones */
-
-    --main-txtTv-color-l:#6D3622; /* Color titulo tarjetas vehiculos */
-    --main-txtv-color-l:#424242; /* Color texto tarjetas vehiculos */
-    --main-bg4-color-l:#0C0B09; /* Color de fondo tarjetas vehiculos */
-    --main-bg4-color-lh:#1B1813; /* Color de fondo tarjetas vehiculos hover */
-
     /*Colores Tema 3 */
 
     --main-bgnav-color-l:#0a0a0a;/* Color de fondo del menu */
@@ -76,6 +50,7 @@
     --main-txtv-color-l:#424242; /* Color texto tarjetas vehiculos */
     --main-bg4-color-l:rgba(211, 218, 216, 0.63); /* Color de fondo tarjetas vehiculos */
     --main-bg4-color-lh:rgb(247, 246, 244); /* Color de fondo tarjetas vehiculos hover */
+    
 }
 
 
